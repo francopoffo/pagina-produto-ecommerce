@@ -1,0 +1,89 @@
+@import url(//db.onlinewebfonts.com/c/e0db35280138f3ae56600b987bf84aac?family=Fabrikat+Mono);
+
+:root {
+    --Bege: #e2d4c9;
+    --Rosa: #f23858;
+    --Azul: #74cffc;
+}
+
+* {
+    font-family: "Fabrikat Mono", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.invisible {
+    display: none;
+}
+
+.container {
+    display: flex;
+    height: 120px;
+    background-color: var(--Bege);
+    width: 100vw;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.cabecalho__esquerda{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 65%;
+
+
+}
+.cabecalho__esquerda-logo {
+    height: 120px;
+    width: 120px;
+    margin-left: 40px;
+}
+
+.cabecalho__esquerda-menu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    font-size: 20px;
+
+}
+.cabecalho__esquerda-menu-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+}
+
+.cabecalho__direita {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 15%;
+    margin-right: 30px;
+    
+}
+
+.cabecalho__direita-carrinho {
+    height: 30px;
+
+}
+.avatar {
+    height: 35px;
+}
