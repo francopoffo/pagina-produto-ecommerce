@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>On the rocks | Produtos</title>
 
-    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/header.css">
 </head>
 <body>
@@ -26,7 +27,7 @@
                     </ul>
                 </div>
                 <div class="cabecalho__direita">
-                    <button>
+                    <button class="cabecalho__direita-botao">
                         <span></span>
                         <img src="./assets/img/icon-cart.svg" alt="Carrinho de compras" class="cabecalho__direita-carrinho">
                     </button>
@@ -37,12 +38,52 @@
                             <p>O seu carrinho está vazio</p>
                         </div>
                     </div>
-                    <img src="./assets/img/avatar.png" alt="Avatar" class="avatar">
+                    <img src="./assets/img/avatar.png" alt="Avatar" class="avatar" onclick="mostraAlerta()">
                 </div>
             
             </div>
         </nav>
     </header>
+    <main>
+        <section class="imagens">
+            <img src="./assets/img/camiseta-1.jpg" alt="Camiseta" class="imagens__principal">
+            <div class="hidden">
+                <img src="./assets/img/camiseta-1.jpg" alt="Camiseta">
+                <button id="proxima"><img src="./assets/img/icon-next.svg" alt="Próxima"></button>
+                <button id="anterior"><img src="./assets/img/icon-previous.svg" alt="Anterior"></button>
+            </div>
+            <div class="imagens__preview">
+                <img src="./assets/img/camiseta-1.jpg" alt="Camiseta" class="imagens__secundaria selecionada">
+                <img src="./assets/img/camiseta-2.jpg" alt="Camiseta" class="imagens__secundaria">
+                <img src="./assets/img/camiseta-3.jpg" alt="Camiseta" class="imagens__secundaria">
+                <img src="./assets/img/camiseta-4.jpg" alt="Camiseta" class="imagens__secundaria">
+            </div>
+        </section>
+        <section class="conteudo">
+            <p class="conteudo__empresa">ON THE ROCKS</p>
+            <h1 class="conteudo__titulo">Camiseta ON THE ROCKS X RAVIOLI PRESS</h1>
+            <p class="conteudo__texto">Camiseta com modelagem Streetwear e design inspirado em nossa última edição da festa</p>
+        <div class="preco">
+            <p>R$ 110,00</p>
+       </div>
+        <div class="botoes">
+            <div class="botoes__quantidade">
+                <button>
+                    <img src="./assets/img/icon-minus.svg" alt="Menos">
+                </button>
+                <p>0</p>
+                <button>
+                    <img src="./assets/img/icon-plus.svg" alt="Mais">
+                </button>
+            </div>
+            <button class="botoes__adicionar">
+                <img src="./assets/img/icon-cart.svg" alt="Carrinho">
+                Adicionar ao carrinho
+            </button>
+
+        </div>
+        </section>
+    </main>
     
     <script src="./assets/main.js"></script>
 </body>

@@ -30,8 +30,9 @@ body {
 .container {
     display: flex;
     height: 120px;
-    background-color: var(--Bege);
+    background: linear-gradient(to bottom, var(--Bege),#8f847c);
     width: 100vw;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
 }
 
 .cabecalho {
@@ -65,8 +66,10 @@ body {
 
 }
 .cabecalho__esquerda-menu-link {
+    font-family: "Fabrikat Mono", sans-serif;
     text-decoration: none;
     text-transform: uppercase;
+    font-weight: 700;
     color: inherit;
 }
 
@@ -79,11 +82,21 @@ body {
     margin-right: 30px;
     
 }
+.cabecalho__direita-botao{
+    background-color: transparent;
+    border: none;
+}
 
 .cabecalho__direita-carrinho {
     height: 30px;
+    
 
 }
 .avatar {
     height: 35px;
+}
+
+.avatar:hover {
+    opacity: 70%;
+    cursor: pointer;
 }
