@@ -1,20 +1,22 @@
-@import url(//db.onlinewebfonts.com/c/e0db35280138f3ae56600b987bf84aac?family=Fabrikat+Mono);
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 
 :root {
-    --Bege: #e2d4c9;
-    --Rosa: #f23858;
-    --Azul: #74cffc;
+  --Bege: #e2d4c9;
+  --Rosa: #f23858;
+  --Azul: #74cffc;
 }
 
 * {
-    font-family: "Fabrikat Mono", sans-serif;
-    box-sizing: border-box;
+  font-family: 'Share Tech Mono', monospace;
+   box-sizing: border-box;
 }
+
 img {
   max-width: 100%;
 }
 body {
-  font-family: "Fabrikat Mono", sans-serif;
+  font-family: 'Share Tech Mono', monospace;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,8 +30,6 @@ body {
   box-shadow: 0 2px 2px rgba(0,0,0,0.2);
   margin-top: 0;
 }
-
-
 
 /* visibility actions */
 .hidden {
@@ -189,6 +189,7 @@ nav {
 .product-info b {
   color: var(--Azul);
 }
+
 .cart-content img {
   width: 60px;
   border-radius: 6px;
@@ -201,6 +202,8 @@ nav {
   
 }
 .checkout-btn {
+  margin-top: 3px;
+  margin-left: 75px;
   background-color: var(--Rosa);
   border-radius: 8px;
   border: none;

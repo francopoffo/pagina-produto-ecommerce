@@ -21,6 +21,8 @@ const lightbox = document.querySelector(".lightbox");
 const addBtn = document.querySelector(".add_btn");
 const indicator = document.querySelector(".indicator");
 const wrp = document.querySelector(".cart-content");
+
+
 let amountValue = 0;
 let currentImg = 1;
 
@@ -81,17 +83,17 @@ function addItem() {
                       </div>
                       <button class="delete-btn" onclick="deleteItem()"><img src="./assets/img/icon-delete.svg" alt="delete"></button>
                     </div>
-                    <button class="checkout-btn">Checkout</button>
                   </div>`;
     indicator.style.display = "block";
     indicator.innerText = amountValue;
   }
 }
 function deleteItem() {
-    wrp.classList.add("empty");
-    wrp.innerHTML = `<p>O seu carrinho está vazio</p>`;
-    indicator.style.display = "none";
+  wrp.classList.add("empty");
+  wrp.innerHTML = `<p>O seu carrinho está vazio</p>`;
+  indicator.style.display = "none";
 }
+
 
 images.forEach((image) => {
   image.addEventListener("click", () => {
@@ -122,8 +124,8 @@ images.forEach((image) => {
   });
 });
 
-menuBtn.addEventListener("click", openMenu);
-closeBtn.addEventListener("click", closeMenu);
+menuBtn.addEventListener("touchstart", openMenu);
+closeBtn.addEventListener("touchstart", closeMenu);
 plusBtn.addEventListener("click", handlePlus);
 minusBtn.addEventListener("click", handleMinus);
 nextBtn.addEventListener("click", nextImage);
@@ -132,3 +134,7 @@ cartBtn.addEventListener("click", toggleCart);
 closeLightboxBtn.addEventListener("click", closeLightBox);
 mainThumbnail.addEventListener("click", openLightBox);
 addBtn.addEventListener("click", addItem);
+
+
+
+

@@ -1,4 +1,5 @@
 @media screen and (max-width: 700px) {
+    
     /* visibility actions */
     .hidden {
       display: flex;
@@ -9,8 +10,14 @@
     /* default styles */
     body {
       position: relative;
+      height: 100vh;
     }
+    
     /* Navbar styles */
+    .container{
+      height: 120px;
+    }
+
     .nav_container {
       padding-inline: 1rem;
     }
@@ -21,9 +28,7 @@
     .menu {
       cursor: pointer;
     }
-    .close-btn {
-      cursor: pointer;
-    }
+    
     .overlay {
       position: absolute;
       z-index: 999;
@@ -46,9 +51,14 @@
       padding: 2rem;
       align-items: flex-start;
       margin: 0;
+      margin-top: 4rem;
       display: none;
       flex-direction: column;
       background-color: var(--White);
+    }
+
+    .close-btn {
+      top: -20px
     }
     .nav_link:hover::after {
       bottom: -15px;
@@ -57,12 +67,18 @@
       display: flex;
     }
     .nav_link {
-      height: fit-content;
+      margin: 0;
+      height: 5px;
       font-weight: 700;
+      left: -20px;
       color: var(--Black);
     }
     .nav_right-sec {
       gap: 1.5rem;
+    }
+    .cart-wrp {
+      position: absolute;
+      left: -180px;
     }
     .avatar {
       width: 30px;
@@ -72,15 +88,23 @@
       flex-direction: column;
       align-items: center;
       margin-inline: 0;
-      height: 100%;
+      height: calc(100vh - 120px);
+      width: 100%;
       margin-bottom: 4rem;
     }
     .thumbnails {
+      margin-top: 2rem;
       height: 40%;
     }
     .content {
-      margin: 2rem;
+      
       height: 50%;
+      display: flex;
+      width: 85%;
+      gap: 0;
+      margin:0;
+      align-items: center;
+      justify-content: center;
     }
     .preview {
       display: none;
@@ -98,17 +122,29 @@
       width: 100%;
       z-index: 1;
     }
+
+    .company {
+      display: none;
+    }
     .title {
-      font-size: 2.2rem;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      width: 100%;
+      align-content: center;
+      width: 100%;
     }
     .price {
-      flex-direction: row;
+      margin: 0;
+      font-weight: 1.3rem;
       align-items: center;
       justify-content: space-between;
     }
     .buttons {
+      margin-top: 1rem;
+      margin-bottom: 0;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       gap: 1rem;
     }
     .amount-btn {
