@@ -1,7 +1,6 @@
 const menuBtn = document.getElementById("menu-btn");
 const closeBtn = document.querySelector(".close-btn");
 const menu = document.querySelector(".nav_links");
-const overlay = document.querySelector(".overlay");
 const mainThumbnail = document.querySelector(".main-thumbnail");
 const mainThumbnailLightBox = document.querySelector(
   ".lightbox-container .main-thumbnail"
@@ -28,13 +27,9 @@ let currentImg = 1;
 
 indicator.style.display = "none";
 function openMenu() {
-  menu.classList.add("active");
-  overlay.classList.add("active");
+  menu.classList.toggle("active");
 }
-function closeMenu() {
-  menu.classList.remove("active");
-  overlay.classList.remove("active");
-}
+
 function handlePlus() {
   amountValue++;
   amount.innerText = amountValue;
@@ -74,16 +69,14 @@ function addItem() {
     if (amountValue > 0) {
         const total = 110.00 * amountValue;
     wrp.classList.remove("empty");
-    wrp.innerHTML = `<div class="product">
-                    <div>
-                      <img src="./assets/img/camiseta-1.jpg" class="product-img" alt="product">
-                      <div class="product-info">
-                        <p class="product-title">Camiseta OTR X RAVIOLI</p>
-                       <p><span>R$110.00</span> × <span class="number">${amountValue}</span> <b>R$${total}</b></p>
-                      </div>
-                      <button class="delete-btn" onclick="deleteItem()"><img src="./assets/img/icon-delete.svg" alt="delete"></button>
-                    </div>
-                  </div>`;
+    wrp.innerHTML = ` <div class="product-info">
+                          <img src="./assets/img/camiseta-1.jpg" class="product-img" alt="product">
+                          <div class="product-content">
+                            <p class="product-title">Camiseta OTR X RAVIOLI</p>
+                            <p class="product-price"><span>R$110.00</span> × <span class="number">${amountValue}</span> R$${total}</p>
+                            <button class="delete-btn" onclick="deleteItem()"><img src="./assets/img/icon-delete.svg" alt="delete"></button>
+                          </div>
+                      </div>`;
     indicator.style.display = "block";
     indicator.innerText = amountValue;
   }
@@ -125,7 +118,6 @@ images.forEach((image) => {
 });
 
 menuBtn.addEventListener("touchstart", openMenu);
-closeBtn.addEventListener("touchstart", closeMenu);
 plusBtn.addEventListener("click", handlePlus);
 minusBtn.addEventListener("click", handleMinus);
 nextBtn.addEventListener("click", nextImage);

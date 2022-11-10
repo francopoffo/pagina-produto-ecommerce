@@ -27,11 +27,12 @@
     }
     .menu {
       cursor: pointer;
+      z-index: 999;
     }
     
     .overlay {
       position: absolute;
-      z-index: 999;
+      z-index: 900;
       top: 0;
       bottom: 0;
       left: 0;
@@ -39,27 +40,29 @@
       background-color: var(--Black);
       opacity: 75%;
       display: none;
+      
     }
     .nav_links {
       position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
-      width: 60%;
+      width: fit-content;
+      height: fit-content;
       z-index: 200;
       gap: 2;
       padding: 2rem;
       align-items: flex-start;
       margin: 0;
-      margin-top: 4rem;
+      margin-top: 8rem;
+      margin-left: 1rem;
       display: none;
       flex-direction: column;
-      background-color: var(--White);
+      background-color: var(--Bege);
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px 0px #000000;
     }
 
-    .close-btn {
-      top: -20px
-    }
     .nav_link:hover::after {
       bottom: -15px;
     }
