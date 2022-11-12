@@ -20,6 +20,7 @@ const lightbox = document.querySelector(".lightbox");
 const addBtn = document.querySelector(".add_btn");
 const indicator = document.querySelector(".indicator");
 const wrp = document.querySelector(".cart-content");
+const checkout = document.querySelector("#checkout");
 
 
 let amountValue = 0;
@@ -126,6 +127,10 @@ cartBtn.addEventListener("click", toggleCart);
 closeLightboxBtn.addEventListener("click", closeLightBox);
 mainThumbnail.addEventListener("click", openLightBox);
 addBtn.addEventListener("click", addItem);
+
+checkout.addEventListener("click", (e) => {
+  localStorage.amount = amountValue;
+})
 
 
 

@@ -134,7 +134,7 @@ nav {
 }
 .cart-wrp {
   position: absolute;
-  left: -260px;
+  left: -360px;
   top: 75px;
   z-index: 999;
   width: 350px;
@@ -212,6 +212,7 @@ nav {
 }
 
 .checkout-btn {
+  text-decoration: none;
   margin-top: 3px;
   margin-left: 75px;
   background-color: var(--Rosa);
