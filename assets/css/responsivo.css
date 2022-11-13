@@ -210,6 +210,14 @@
     .checkout__preco {
       font-size: 1.5rem;
     }
+    .checkout__botao {
+      height: 100px;
+      width: 180px;
+      border: none;
+      padding: 0;
+  
+  }
+
     }
 
   
